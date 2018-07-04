@@ -1,3 +1,5 @@
 # AVE
 
-Yapeng Tian, Jing Shi, Bochen Li, Zhiyao Duan, Chenliang Xu. Audio-Visual Event Localization in Unconstrained Videos, ECCV 2018.
+Audio-Visual Event Localization in Unconstrained Videos (To appear in ECCV 2018)
+
+
