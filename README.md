@@ -6,11 +6,16 @@ Audio-Visual Event Localization in Unconstrained Videos (To appear in ECCV 2018)
 
 If you find this work useful, please consider citing it.
 
-@inproceedings{DBPN2018,
-  title={Deep Back-Projection Networks for Super-Resolution},
-  author={Haris, Muhammad and Shakhnarovich, Greg and Ukita, Norimichi},
-  booktitle={IEEE Conference on Computer Vision and Pattern Recognition (CVPR)},
+@inproceedings{AVE2018,
+
+  title={Audio-Visual Event Localization in Unconstrained Videos},
+  
+  author={Yapeng Tian, Jing Shi, Bochen Li, Zhiyao Duan, and Chenliang Xu},
+  
+  booktitle={ECCV},
+  
   year={2018}
+  
 }
 
 
