@@ -8,7 +8,7 @@ AVE dataset can be downloaded from https://drive.google.com/open?id=1FjKwe79e0u9
 
 ### Requirements
 
-Pytorch, Keras, ffmpeg. 
+Python-3.6, Pytorch-0.3.1, Keras, ffmpeg. 
 
 ### Visualize attention maps
 
