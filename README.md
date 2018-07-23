@@ -8,7 +8,7 @@ Audio and visual features can be found in . Please put videos of AVE dataset int
 
 ### Requirements
 
-Pytorch, Keras, ffmpeg, and Tensorflow (extract audio features using pre-trained vggish model from Google Research). 
+Pytorch, Keras, ffmpeg. 
 
 ### Visualize attention maps
 
