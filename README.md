@@ -9,7 +9,7 @@ Audio feature, visual feature, one-hot labels, and train/val/test lists can be f
 
 
 
-### CitationS
+### Citation
 
 If you find this work useful, please consider citing it.
 
