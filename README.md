@@ -12,6 +12,12 @@ Run: python attention_visualization.py to generate audio-guided visual attention
 
 ![image](https://github.com/YapengTian/AVE-ECCV18/blob/master/Figs/att_easy.jpg)
 
+### Supervised audio-visual event localization
+
+### Weakly-supervised audio-visual event localization
+
+### Cross-modality localization
+
 
 ### Citation
 
