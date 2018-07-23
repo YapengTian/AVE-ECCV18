@@ -6,7 +6,9 @@ AVE dataset can be downloaded from https://drive.google.com/open?id=1FjKwe79e0u9
 
 Audio and visual features can be found in .
 
+### Visualize attention maps
 
+run: python attention_visualization.py to generate audio-guided visual attention maps
 
 
 ### Citation
