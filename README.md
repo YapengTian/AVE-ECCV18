@@ -10,7 +10,7 @@ Audio and visual features can be found in .
 
 run: python attention_visualization.py to generate audio-guided visual attention maps
 
-![image](https://github.com/YapengTian/AVE-ECCV18/Figs/att_easy.jpg)
+![image](https://github.com/YapengTian/AVE-ECCV18/blob/master/Figs/att_easy.jpg)
 
 
 ### Citation
