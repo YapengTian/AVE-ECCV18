@@ -51,7 +51,7 @@ dir_labels = "data/labels.h5"
 dir_order_test = "data/test_order.h5"
 
 # access to original videos for extracting video frames
-raw_video_dir = "/mnt/disk0/dat/ytian21/AVA_Dataset/large_avadataset" # videos in AVE dataset
+raw_video_dir = "data/AVE" # videos in AVE dataset
 lis = os.listdir(raw_video_dir)
 f = open("data/Annotations.txt", 'r')
 dataset = f.readlines() 
