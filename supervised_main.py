@@ -120,7 +120,7 @@ def train(args):
 def val(args):
     net_model.eval()
     AVEData = AVEDataset(video_dir=args.dir_video, audio_dir=args.dir_audio, label_dir=args.dir_labels,
-                         order_dir=args.dir_order_test, batch_size=402)
+                         order_dir=args.dir_order_val, batch_size=402)
     nb_batch = AVEData.__len__()
     audio_inputs, video_inputs, labels = AVEData.get_batch(0)
     audio_inputs = Variable(audio_inputs.cuda(), requires_grad=False)
