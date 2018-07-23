@@ -1,6 +1,6 @@
 from __future__ import print_function
 import os
-os.environ["CUDA_VISIBLE_DEVICES"] = "1"
+os.environ["CUDA_VISIBLE_DEVICES"] = "0" # set GPU ID
 import torch.nn as nn
 from torch.autograd import Variable
 import matplotlib.pyplot as plt
