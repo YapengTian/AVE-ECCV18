@@ -4,7 +4,7 @@ Audio-Visual Event Localization in Unconstrained Videos (To appear in ECCV 2018)
 
 AVE dataset can be downloaded from https://drive.google.com/open?id=1FjKwe79e0u96vdjIVwfRQ1V6SoDHe7kK.
 
-Audio and visual features can be found in . Please put videos of AVE dataset into /data/AVE folder and features into /data folder.
+Audio and visual features can be found in . Please put videos of AVE dataset into /data/AVE folder and features into /data folder before running the code.
 
 ### Visualize attention maps
 
