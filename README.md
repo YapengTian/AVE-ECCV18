@@ -18,6 +18,18 @@ Run: python attention_visualization.py to generate audio-guided visual attention
 
 ### Supervised audio-visual event localization
 
+Testing: 
+
+A+V-att model in the paper: python supervised_main.py --model_name AV_att
+
+DMRN model in the paper:    python supervised_main.py --model_name DMRN  
+
+Training:
+
+python supervised_main.py --model_name AV_att --train
+
+
+
 ### Weakly-supervised audio-visual event localization
 
 ### Cross-modality localization
