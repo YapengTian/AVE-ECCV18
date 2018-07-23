@@ -62,7 +62,7 @@ with h5py.File(dir_order_test, 'r') as hf:
     test_order = hf['order'][:]
 
 # pre-trained models
-att_model = torch.load('model/DMRN.pt')
+att_model = torch.load('model/AV_att.pt')
 att_layer = att_model._modules.get('affine_h') # extract attention maps from the layer
 
 
