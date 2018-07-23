@@ -6,8 +6,10 @@ import torch.optim as optim
 from torch.autograd import Variable
 from torch.nn import init
 
-# two-branch/dual muli-modal residual fusion
 class TBMRF_Net(nn.Module):
+    '''
+    two-branch/dual muli-modal residual fusion
+    '''
     def __init__(self, embedding_dim, hidden_dim, hidden_size, tagset_size, nb_block):
         super(TBMRF_Net, self).__init__()
         self.hidden_dim = hidden_dim
@@ -71,21 +73,19 @@ class TBMRF_Net(nn.Module):
 
         v_t = video.view(video.size(0) * video.size(1), -1, 512)
         V = v_t
-        v_t = self.relu(self.affine_video(v_t))
 
+        # Audio-guided visual attention
+        v_t = self.relu(self.affine_video(v_t))
         a_t = audio.view(-1, audio.size(-1))
         a_t = self.relu(self.affine_audio(a_t))
-
-
         content_v = self.affine_v(v_t) \
                     + self.affine_g(a_t).unsqueeze(2)
         z_t = self.affine_h((F.tanh(content_v))).squeeze(2)
-        alpha_t = F.softmax(z_t, dim=-1).view(z_t.size(0), -1, z_t.size(1))
-        # Construct c_t: B x seq x hidden_size
+        alpha_t = F.softmax(z_t, dim=-1).view(z_t.size(0), -1, z_t.size(1))  # attention map
         c_t = torch.bmm(alpha_t, V).view(-1, 512)
-        # SElayer
-        video_t = c_t.view(video.size(0), -1, 512)
+        video_t = c_t.view(video.size(0), -1, 512) # attended visual features
 
+        # BiLSTM for Temporal modeling
         hidden1 = (autograd.Variable(torch.zeros(2, audio.size(0), self.hidden_dim).cuda()),
                    autograd.Variable(torch.zeros(2, audio.size(0), self.hidden_dim).cuda()))
         hidden2 = (autograd.Variable(torch.zeros(2, audio.size(0), self.hidden_dim).cuda()),
@@ -96,7 +96,8 @@ class TBMRF_Net(nn.Module):
             audio.view(len(audio), 10, -1), hidden1)
         lstm_video, hidden2 = self.lstm_video(
             video_t.view(len(video), 10, -1), hidden2)
-        #print(lstm_video.size())
+
+        # Feature fusion and prediction
         output = self.TBMRF_block(lstm_audio, lstm_video, self.nb_block)
         out = self.L2(output)
         out = F.softmax(out, dim=-1)
