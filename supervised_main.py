@@ -1,6 +1,6 @@
 ## ECCV-2018-Audio-Visual Event Localization in Unconstrained Videos
 ## https://arxiv.org/abs/1803.08842
-## supervised audio-visual event localization with dual multi-modal residual fusion and audio-guided visual attention
+## supervised audio-visual event localization with feature fusion and audio-guided visual attention
 
 from __future__ import print_function
 import os
@@ -15,6 +15,7 @@ from sklearn.metrics import accuracy_score, classification_report
 from dataloader import *
 import random
 from models_fusion import *
+from models import *
 random.seed(3344)
 import time
 import warnings
@@ -24,6 +25,9 @@ import argparse
 parser = argparse.ArgumentParser(description='AVE')
 
 # Data specifications
+parser.add_argument('--model_name', type=str, default='AV_att',
+                    help='model name')
+
 parser.add_argument('--dir_video', type=str, default="data/visual_feature.h5",
                     help='visual features')
 parser.add_argument('--dir_audio', type=str,
@@ -39,7 +43,7 @@ parser.add_argument('--dir_order_val', type=str, default='data/val_order.h5',
 parser.add_argument('--dir_order_test', type=str, default='data/test_order.h5',
                     help='indices of testing samples')
 
-parser.add_argument('--nb_epoch', type=int, default=400,
+parser.add_argument('--nb_epoch', type=int, default=300,
                     help='number of epoch')
 parser.add_argument('--batch_size', type=int, default=64,
                     help='number of batch size')
@@ -48,10 +52,16 @@ parser.add_argument('--train', action='store_true', default=False,
                     help='train a new model')
 args = parser.parse_args()
 
+
 # model
-model_name = 'DMRN'
-net_model = TBMRF_Net(128, 128, 512, 29, 1)
+model_name = args.model_name
+if model_name == 'AV_att': # corresponding to A+V-att model in the paper
+    net_model = att_Net(128, 128, 512, 29)
+elif model_name == 'DMRN': # corresponding to DMRN. The pre-trained DMRN.pt was trained by fine-tuning the AV_att model.
+    net_model = TBMRF_Net(128, 128, 512, 29, 1)
+
 net_model.cuda()
+
 loss_function = nn.MultiLabelSoftMarginLoss()
 optimizer = optim.Adam(net_model.parameters(), lr=1e-3)
 scheduler = StepLR(optimizer, step_size=15000, gamma=0.1)
@@ -107,11 +117,10 @@ def train(args):
                 best_val_acc = val_acc
                 torch.save(net_model, 'model/' + model_name + ".pt")
 
-
 def val(args):
     net_model.eval()
     AVEData = AVEDataset(video_dir=args.dir_video, audio_dir=args.dir_audio, label_dir=args.dir_labels,
-                         order_dir=args.dir_order_val, batch_size=402)
+                         order_dir=args.dir_order_test, batch_size=402)
     nb_batch = AVEData.__len__()
     audio_inputs, video_inputs, labels = AVEData.get_batch(0)
     audio_inputs = Variable(audio_inputs.cuda(), requires_grad=False)
