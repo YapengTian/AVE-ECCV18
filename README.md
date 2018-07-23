@@ -4,6 +4,9 @@ Audio-Visual Event Localization in Unconstrained Videos (To appear in ECCV 2018)
 
 AVE dataset can be downloaded from https://drive.google.com/open?id=1FjKwe79e0u96vdjIVwfRQ1V6SoDHe7kK.
 
+Audio feature, visual feature, one-hot labels, and train/val/test lists can be found in .
+
+
 
 
 ### Citation
