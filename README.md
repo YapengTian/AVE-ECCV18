@@ -39,13 +39,13 @@ python supervised_main.py --model_name AV_att --train
 
 If you find this work useful, please consider citing it.
 
- > @inproceedings{AVE2018, <br>
- >    title={Audio-Visual Event Localization in Unconstrained Videos},<br>
- >   author={Yapeng Tian, Jing Shi, Bochen Li, Zhiyao Duan, and Chenliang Xu},<br>
- >    booktitle={ECCV},<br>
- >   year={2018}<br>
- > }
- 
+<pre><code>@InProceedings{tian2018ave,
+  author={Yapeng Tian, Jing Shi, Bochen Li, Zhiyao Duan, and Chenliang Xu},
+  title={Audio-Visual Event Localization in Unconstrained Videos},
+  booktitle = {ECCV},
+  year = {2018}
+}
+</code></pre>
  
  ### Acknowledgements
  
