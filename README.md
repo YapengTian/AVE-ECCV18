@@ -22,7 +22,7 @@ Testing:
 
 A+V-att model in the paper: python supervised_main.py --model_name AV_att
 
-[DMRN](https://drive.google.com/file/d/1hQwbhutA3fQturduRnHMyfRqdrRHgmC9/view?usp=sharing) model in the paper:    python supervised_main.py --model_name DMRN  
+[DMRN](https://drive.google.com/file/d/1D6M6lnUkS4yby0Y4LODIYAQUR6N_GtaR/view?usp=sharing) model in the paper:    python supervised_main.py --model_name DMRN  
 
 Training:
 
