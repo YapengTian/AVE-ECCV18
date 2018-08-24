@@ -46,6 +46,15 @@ python weak_supervised_main.py --train
 ### Cross-modality localization
 For this task, we developed a cross-modal matching network. Here, we used visual feature vectors via global average pooling, and you can find [here](https://drive.google.com/file/d/1l-c8Kpr5SZ37h-NpL7o9u8YXBNVlX_Si/view?usp=sharing). Please put the feature into data folder.
 
+Testing: 
+
+python cmm_test.py
+
+Training:
+
+python cmm_train.py
+
+
 
 ### Citation
 
