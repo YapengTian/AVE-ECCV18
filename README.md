@@ -33,7 +33,7 @@ python supervised_main.py --model_name AV_att --train
 
 
 ### Weakly-supervised audio-visual event localization
-We add some videos without audio-visual events into training data. Therefore, the labels of these videos are background. Processed visual features can be found in [visual_feature_noisy.h5](https://drive.google.com/file/d/1I3OtOHJ8G1-v5G2dHIGCfevHQPn-QyLh/view?usp=sharing). 
+We add some videos without audio-visual events into training data. Therefore, the labels of these videos are background. Processed visual features can be found in [visual_feature_noisy.h5](https://drive.google.com/file/d/1I3OtOHJ8G1-v5G2dHIGCfevHQPn-QyLh/view?usp=sharing). Put the feature into data folder.
 
 Testing: 
 
@@ -44,6 +44,7 @@ Training:
 python weak_supervised_main.py --train
 
 ### Cross-modality localization
+For this task, we developed a cross-modal matching network. Here, we used visual feature vectors via global average pooling, and you can find [here](https://drive.google.com/file/d/1l-c8Kpr5SZ37h-NpL7o9u8YXBNVlX_Si/view?usp=sharing). Please put the feature into data folder.
 
 
 ### Citation
