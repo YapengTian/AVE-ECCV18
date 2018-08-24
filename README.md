@@ -1,4 +1,4 @@
-Audio-Visual Event Localization in Unconstrained Videos (To appear in ECCV 2018) (not ready)
+Audio-Visual Event Localization in Unconstrained Videos (To appear in ECCV 2018)
 
 ### AVE Dataset & Features
 
