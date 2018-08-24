@@ -4,7 +4,7 @@ Audio-Visual Event Localization in Unconstrained Videos (To appear in ECCV 2018)
 
 AVE dataset can be downloaded from https://drive.google.com/open?id=1FjKwe79e0u96vdjIVwfRQ1V6SoDHe7kK.
 
-[Audio feature](https://drive.google.com/file/d/1F6p4BAOY-i0fDXUOhG7xHuw_fnO5exBS/view?usp=sharing) and [visual feature](https://drive.google.com/file/d/1hQwbhutA3fQturduRnHMyfRqdrRHgmC9/view?usp=sharing) (7.7GB) are also released. Please put videos of AVE dataset into /data/AVE folder and features into /data folder before running the code.
+[Audio feature](https://drive.google.com/file/d/1F6p4BAOY-i0fDXUOhG7xHuw_fnO5exBS/view?usp=sharing) and [visual feature](https://drive.google.com/file/d/1hQwbhutA3fQturduRnHMyfRqdrRHgmC9/view?usp=sharing) (7.7GB) are also released. Please put videos of AVE dataset into /data/AVE folder and features into /data folder before running the code. 
 
 ### Requirements
 
@@ -31,6 +31,13 @@ python supervised_main.py --model_name AV_att --train
 
 
 ### Weakly-supervised audio-visual event localization
+We add some videos without audio-visual events into training data. Therefore, the labels of these videos are background. Processed visual features can be found in [visual_feature_noisy.h5](https://drive.google.com/file/d/1I3OtOHJ8G1-v5G2dHIGCfevHQPn-QyLh/view?usp=sharing). 
+
+Testing: 
+W-A+V-att model in the paper: python weak_supervised_main.py
+Training:
+
+python weak_supervised_main.py --train
 
 ### Cross-modality localization
 
