@@ -22,7 +22,7 @@ parser = argparse.ArgumentParser(description='AVE')
 # Data specifications
 parser.add_argument('--dir_video', type=str, default="data/visual_feature.h5",
                     help='dataset directory')
-parser.add_argument('--dir_video_bg', type=str, default="data/video_feature_noisy.h5",
+parser.add_argument('--dir_video_bg', type=str, default="data/visual_feature_noisy.h5",
                     help='dataset directory')
 
 parser.add_argument('--dir_audio', type=str,
