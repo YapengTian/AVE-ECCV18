@@ -56,6 +56,13 @@ Training:
 
 python cmm_train.py
 
+### Other Related or Follow-up works
+
+[1] Rouditchenko, Andrew, et al. "Self-supervised Audio-visual Co-segmentation." ICASSP, 2019. [Paper](https://ieeexplore.ieee.org/abstract/document/8682467)
+
+[2] Lin, Yan-Bo, Yu-Jhe Li, and Yu-Chiang Frank Wang. "Dual-modality seq2seq network for audio-visual event localization." ICASSP, 2019 [Paper](https://arxiv.org/abs/1902.07473)
+
+[2] Rana, Aakanksha, Cagri Ozcinar, and Aljosa Smolic. "Towards Generating Ambisonics Using Audio-visual Cue for Virtual Reality." ICASSP, 2019. [Paper](https://www.researchgate.net/profile/Cagri_Ozcinar/publication/332790611_Towards_Generating_Ambisonics_Using_Audio-visual_Cue_for_Virtual_Reality/links/5ccb031da6fdcc4719835ad3/Towards-Generating-Ambisonics-Using-Audio-visual-Cue-for-Virtual-Reality.pdf)
 
 
 ### Citation
