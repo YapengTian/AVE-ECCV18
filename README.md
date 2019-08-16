@@ -64,6 +64,8 @@ python cmm_train.py
 
 [3] Rana, Aakanksha, Cagri Ozcinar, and Aljosa Smolic. "Towards Generating Ambisonics Using Audio-visual Cue for Virtual Reality." ICASSP, 2019. [[Paper]](https://www.researchgate.net/profile/Cagri_Ozcinar/publication/332790611_Towards_Generating_Ambisonics_Using_Audio-visual_Cue_for_Virtual_Reality/links/5ccb031da6fdcc4719835ad3/Towards-Generating-Ambisonics-Using-Audio-visual-Cue-for-Virtual-Reality.pdf)
 
+[4] Yu Wu, Linchao Zhu, Yan Yan, Yi Yang. "Dual Attention Matching for Audio-Visual Event Localization", ICCV, 2019. (oral) [[website]](https://yu-wu.net/)
+
 
 ### Citation
 
