@@ -2,7 +2,7 @@ Audio-Visual Event Localization in Unconstrained Videos (To appear in ECCV 2018)
 
 [Project](https://sites.google.com/view/audiovisualresearch) [ArXiv](https://arxiv.org/abs/1803.08842) [Demo Video](https://www.youtube.com/watch?v=m6r6BbD5MSc) 
 
-[![Watch the video](doc/demo_thumbnail.png)](https://www.youtube.com/watch?v=m6r6BbD5MSc)
+[![Watch the video](Figs/demo_thumbnail.png)](https://www.youtube.com/watch?v=m6r6BbD5MSc)
 
 ### AVE Dataset & Features
 
