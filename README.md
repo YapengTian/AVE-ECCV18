@@ -74,7 +74,7 @@ python cmm_train.py
 If you find this work useful, please consider citing it.
 
 <pre><code>@InProceedings{tian2018ave,
-  author={Yapeng Tian, Jing Shi, Bochen Li, Zhiyao Duan, and Chenliang Xu},
+  author={Tian, Yapeng and Shi, Jing and Li, Bochen and Duan, Zhiyao and Xu, Chenliang},
   title={Audio-Visual Event Localization in Unconstrained Videos},
   booktitle = {ECCV},
   year = {2018}
