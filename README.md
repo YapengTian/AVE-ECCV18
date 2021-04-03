@@ -68,6 +68,9 @@ python cmm_train.py
 
 [4] Yu Wu, Linchao Zhu, Yan Yan, Yi Yang. "Dual Attention Matching for Audio-Visual Event Localization", ICCV, 2019. (oral) [[website]](https://yu-wu.net/)
 
+[5] Jinxing Zhou, Liang Zheng, Yiran Zhong, Shijie Hao, Meng Wang. Positive Sample Propagation along the Audio-Visual Event Line, CVPR 2021. [[paper]](https://arxiv.org/abs/2104.00239)[[code]](https://github.com/jasongief/PSP_CVPR_2021)
+
+
 
 ### Citation
 
